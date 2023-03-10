@@ -1,0 +1,21 @@
+ALGORITHM Prob lowel
+VAR
+    set1,set2 : ARRAY_OF INTEGER[10]
+    i,j : INTEGER;
+    a = array_name : ARRAY_OF ["13","21","12","43","12"];
+    n = INTEGER
+    temp = INTEGER := 0; 
+BEGIN
+    FOR (i = 1; i < n; i++)
+    temp = a[i];
+    j = i - 1
+    END_FOR
+
+    WHILE(j >= 0 and temp <= a[j]){
+    a[j + 1]= a[j];
+    j = j -1
+}
+    a[j+1] = temp;
+    END_WHILE
+    WRITE(a,n)
+END
